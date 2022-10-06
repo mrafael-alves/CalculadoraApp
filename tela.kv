@@ -1,0 +1,117 @@
+
+<Calculadora>:
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.width, root.height
+
+		TextInput:
+		    id: calc_input
+		    text: '0'
+		    halign: 'right'
+		    font_size: 60
+		    size_hint: (1, .2)
+
+		GridLayout:
+		    cols: 4
+		    rows: 5
+
+		    # row 1
+		    Button:
+		        text: '%'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    Button:
+		        text: 'CE'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    Button:
+		        id: clear
+		        text: 'C'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        on_press: root.clear()
+		    Button:
+		        text: '/'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    # row 2
+		    Button:
+		        text: '7'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '8'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '9'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: 'X'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    # row 3
+		    Button:
+		        text: '4'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '5'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '6'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '-'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    # row 4
+		    Button:
+		        text: '1'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '2'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '3'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '+'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		    # row 5
+		    Button:
+		        text: '+/-'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '0'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '.'
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (157/255, 157/255, 157/255, 1)
+		    Button:
+		        text: '='
+		        size_hint: (.2, .2)
+		        font_size: 32
+		        background_color: (1, 140/255, 0, 1)

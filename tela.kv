@@ -1,3 +1,12 @@
+<GrayButton@Button>:
+    size_hint: (.2, .2)
+    font_size: 32
+    background_color: (157/255, 157/255, 157/255, 1)
+
+<OtherButton@Button>:
+    size_hint: (.2, .2)
+    font_size: 32
+
 
 <Calculadora>:
 	BoxLayout:
@@ -16,102 +25,64 @@
 		    rows: 5
 
 		    # row 1
-		    Button:
+		    OtherButton:
 		        text: '%'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		    Button:
+		    OtherButton:
 		        text: 'CE'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		    Button:
+		    OtherButton:
 		        id: clear
 		        text: 'C'
-		        size_hint: (.2, .2)
-		        font_size: 32
 		        on_press: root.clear()
-		    Button:
+		    OtherButton:
 		        text: '/'
-		        size_hint: (.2, .2)
-		        font_size: 32
+
 		    # row 2
-		    Button:
+		    GrayButton:
 		        text: '7'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '8'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '9'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
-		        text: 'X'
-		        size_hint: (.2, .2)
-		        font_size: 32
+		        on_press: root.btPress(self.text)
+		    OtherButton:
+		        text: 'x'
+
 		    # row 3
-		    Button:
+		    GrayButton:
 		        text: '4'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '5'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '6'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    OtherButton:
 		        text: '-'
-		        size_hint: (.2, .2)
-		        font_size: 32
+
 		    # row 4
-		    Button:
+		    GrayButton:
 		        text: '1'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '2'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '3'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    OtherButton:
 		        text: '+'
-		        size_hint: (.2, .2)
-		        font_size: 32
+
 		    # row 5
-		    Button:
+		    GrayButton:
 		        text: '+/-'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		    GrayButton:
 		        text: '0'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		        on_press: root.btPress(self.text)
+		    GrayButton:
 		        text: '.'
-		        size_hint: (.2, .2)
-		        font_size: 32
-		        background_color: (157/255, 157/255, 157/255, 1)
-		    Button:
+		    OtherButton:
 		        text: '='
-		        size_hint: (.2, .2)
-		        font_size: 32
 		        background_color: (1, 140/255, 0, 1)

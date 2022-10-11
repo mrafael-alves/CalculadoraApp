@@ -5,7 +5,7 @@ from kivy.core.window import Window
 
 
 # Define tamanho da janela do app
-Window.size = (300,500)
+Window.size = (300, 500)
 
 # Constrói o app a partir do arquivo .kv
 Builder.load_file('tela.kv')
@@ -17,7 +17,7 @@ class Calculadora(Widget):
     def clear(self):
         self.ids.calc_input.text = '0'
 
-    # registra o pressionar de uma tecla
+    # função que registra o pressionar de uma tecla numérica
     def btPress(self, button):
         previous = self.ids.calc_input.text
 
@@ -26,6 +26,12 @@ class Calculadora(Widget):
             self.ids.calc_input.text = f'{button}'
         else:
             self.ids.calc_input.text = f'{previous}{button}'
+
+    # função que registra os sinais de operações matemáticas (+,-,x,/)
+    def operation(self, sign):
+        previous = self.ids.calc_input.text
+        self.ids.calc_input.text = f'{previous}{sign}'
+
 
 
 # Classe que cria uma instância do Widget Calculadora

@@ -10,6 +10,7 @@ Window.size = (300, 500)
 # Constrói o app a partir do arquivo .kv
 Builder.load_file('tela.kv')
 
+
 # Classe contendo funções da calculadora
 class Calculadora(Widget):
 
@@ -23,8 +24,12 @@ class Calculadora(Widget):
         self.ids.calc_input.text = previous[:-1]
 
     # Função que registra o pressionar de uma tecla numérica
-    def btPress(self, button):
+    def bt_press(self, button):
         previous = self.ids.calc_input.text
+
+        # Apaga mensagem de erro ao clicar em um dígito
+        if 'Error' in previous:
+            previous = ''
 
         if previous == '0':
             self.ids.calc_input.text = ''
@@ -56,7 +61,7 @@ class Calculadora(Widget):
                 self.ids.calc_input.text = previous
 
     # Função que altera sinal de positivo e negativo de número
-    def changeSign(self):
+    def change_sign(self):
         previous = self.ids.calc_input.text
 
         if '-' in previous:
@@ -70,11 +75,16 @@ class Calculadora(Widget):
         answer = float(previous) / 100.0
         self.ids.calc_input.text = str(answer)
 
-
-
-
-
-
+    # Função que retorna o resultado da operação
+    def equals(self):
+        # Testa a operação digitada
+        try:
+            previous = self.ids.calc_input.text
+            result = eval(previous)
+            self.ids.calc_input.text = str(result)
+        # Imprime erro caso o teste acima falhe
+        except:
+            self.ids.calc_input.text = 'Error'
 
 
 # Classe que cria uma instância do Widget Calculadora

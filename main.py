@@ -17,6 +17,11 @@ class Calculadora(Widget):
     def clear(self):
         self.ids.calc_input.text = '0'
 
+    # Função que apaga o último caractere da caixa de texto
+    def backspace(self):
+        previous = self.ids.calc_input.text
+        self.ids.calc_input.text = previous[:-1]
+
     # Função que registra o pressionar de uma tecla numérica
     def btPress(self, button):
         previous = self.ids.calc_input.text

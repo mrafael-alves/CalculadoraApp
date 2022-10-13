@@ -27,12 +27,13 @@
 		    # row 1
 		    OtherButton:
 		        text: '%'
+
 		    OtherButton:
-		        text: 'CE'
-		    OtherButton:
-		        id: clear
 		        text: 'C'
 		        on_press: root.clear()
+		    OtherButton:
+		        text: '<-'
+		        on_press: root.backspace()
 		    OtherButton:
 		        text: '/'
 		        on_press: root.operation(self.text)
@@ -88,7 +89,6 @@
 		    GrayButton:
 		        text: '.'
 		        on_press: root.decimal()
-
 		    OtherButton:
 		        text: '='
 		        background_color: (1, 140/255, 0, 1)

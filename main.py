@@ -55,6 +55,16 @@ class Calculadora(Widget):
                 previous = f'{previous}.'
                 self.ids.calc_input.text = previous
 
+    # Função que altera sinal de positivo e negativo de número
+    def changeSign(self):
+        previous = self.ids.calc_input.text
+
+        if '-' in previous:
+            self.ids.calc_input.text = f"{previous.replace('-', '')}"
+        else:
+            self.ids.calc_input.text = f'-{previous}'
+
+
 
 
 

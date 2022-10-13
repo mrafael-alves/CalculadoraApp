@@ -64,6 +64,12 @@ class Calculadora(Widget):
         else:
             self.ids.calc_input.text = f'-{previous}'
 
+    # Função que retorna o peso da porcentagem em decimal
+    def percent(self):
+        previous = self.ids.calc_input.text
+        answer = float(previous) / 100.0
+        self.ids.calc_input.text = str(answer)
+
 
 
 
